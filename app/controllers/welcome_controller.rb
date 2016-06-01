@@ -5,7 +5,7 @@ class WelcomeController < ApplicationController
   def new
   	
   	@Persona = Persona.new
-	@Persona.usuarios.build
+	  @Persona.usuarios.build
   end
 
   def create
