@@ -1,0 +1,27 @@
+<h4>Example Regist Double Model</h4>
+<div>
+
+	<%= form_for(@Persona,:url=>{:action=>:create}) do |a| %>
+
+    <%= a.label :name %>
+    <%= a.text_field :name %>
+
+    <%= a.label :lasname %>
+    <%= a.text_field :lasname %>
+
+    <%= a.fields_for :usuarios do |h| %>
+
+        <%= h.label :user %>
+        <%= h.text_field :user %>
+
+        <%= h.label :pasword %>
+        <%= h.text_field :pasword %>
+
+    <% end %>
+
+    <%= a.submit "Enviar" %>
+
+<% end %>  
+
+
+</div>
